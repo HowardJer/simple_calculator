@@ -23,7 +23,10 @@ if choice in ('1', '2', '3','4'):
         print(num1, "*", num2, "=", multiplication.multiply(num1, num2))
 
     elif choice == '4':
-        print(num1, "/", num2, "=", division.divide(num1,num2))
-else:
+        try:
+            print(num1, "/", num2, "=", division.divide(num1,num2))
+        except ZeroDivisionError:
+            print("You cannot divide by zero")
+    else:
         print("Invalid Input")
 
